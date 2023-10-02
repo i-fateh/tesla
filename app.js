@@ -36,11 +36,8 @@ function toggleAnimationAndChangeImages(images) {
     part3.classList.remove('animPart3');
     part4.classList.remove('animPart4');
     
-    // Utilisation d'un setTimeout pour déclencher l'animation après une petite pause
     setTimeout(() => {
         updateBackgroundImages(images);
-        
-        // Utilisation d'un setTimeout pour ajouter la classe d'animation avec fondu
         setTimeout(() => {
             part1.classList.add('animPart1');
             part2.classList.add('animPart2');
@@ -50,7 +47,6 @@ function toggleAnimationAndChangeImages(images) {
     }, 10);
 }
 
-// Génération des gestionnaires d'événements pour chaque bouton
 for (const key in imageSets) {
     if (imageSets.hasOwnProperty(key)) {
         const button = document.getElementById(key);
