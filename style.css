@@ -1,0 +1,257 @@
+html, body {
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    overflow: hidden;
+}
+
+video {
+    z-index: 99;
+    width: 100vw;
+    height: 100vh;
+    
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    object-fit: cover;
+}
+
+#slide1 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* les cercles */
+#part1, #part2, #part3, #part4 {
+    position: absolute;
+    background-position: center;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+}
+
+#part1{
+    width: 300px;
+    height: 300px;
+    z-index: 4;
+}
+
+#part2 {
+    width: 600px;
+    height: 600px;
+    z-index: 3;
+}
+#part3 {
+    width: 900px;
+    height: 900px;
+    z-index: 2;
+}
+#part4 {
+    width: 2440px;
+    height: 1100px;
+    filter: blur(10);
+    z-index: 1;
+    border-radius: 0px;
+    background-image: url('./img/index/essaiFullLand.png');
+}
+
+/* image front */
+.animPart1, .animPart2, .animPart3, .animPart4 {
+    animation-duration: .7s;
+    animation-name: circle1;
+    animation-timing-function: ease-in-out;
+}
+.animPart2 {
+    animation-timing-function: ease-in-out;
+    animation-duration: .9s;
+}
+.animPart3 {
+    animation-timing-function: ease-in-out;
+    animation-duration: .9s;
+}
+.animPart4 {
+    animation-timing-function: ease-in-out;
+    animation-duration: .7s;
+}
+
+
+/* image back */
+/* .animBack1, .animBack2, .animBack3, .animBack4 {
+    animation-duration: 2s;
+    animation-name: circle1;
+    animation-timing-function: ease-in;
+}
+.animBack2 {
+    animation-timing-function: ease;
+    animation-duration: 1.1s;
+}
+.animBack3 {
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.3s;
+}
+.animBack4 {
+    animation-timing-function: ease-out;
+    animation-duration: .9s;
+} */
+
+h1, p {
+    position: absolute;
+    left: 100px;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    top: 70px;
+    font-size: 7em;
+    z-index: 999;
+    text-shadow: 1px 1px #000000;
+
+}
+
+p {
+    top: 205px;
+    padding: 10px;
+    font-size: 4em;
+    background-color: rgba(0, 0, 0, 0.207);
+}
+
+.sign {
+    top: 335px;
+    font-size: 2em;
+    color: rgba(255, 106, 0, 0.887);
+}
+
+@keyframes circle1 {
+    0% {
+        transform: rotate(0deg) scale(1.3);
+        opacity: 1;
+    }
+    20%{
+        opacity: .3;
+        filter: blur(100);
+    }
+    40%{
+        opacity: .6;
+        filter: blur(100);
+        transform: rotate(0deg) scale(1.6);
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* REMOTE */
+#remote {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    z-index: 99;
+    display: flex; align-items: center; justify-content: center;
+    background-color: transparent;
+}
+
+#front, #back, #frontLight, #backLight, #interiorLight, #interiorDark, #side, #interiorSide  {
+    width: 150px;
+    height: auto;
+    aspect-ratio: 16/9;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+#front:hover, #back:hover, #frontLight:hover, #backLight:hover, #interiorLight:hover, #interiorDark:hover, #side:hover, #interiorSide:hover  {
+    opacity: .7;
+    transition: .3s;
+    transform: scale(1.1);
+    filter: contrast(1.3) brightness(1.3) grayscale(1);
+}
+
+.frontImg {
+    background-image: url('./img/index/essaiFullLand.png');
+}
+
+.backImg {
+    background-image: url('./img/index/back4.png');
+}
+
+.backLightImg {
+    background-image: url('./img/index/backLight4.png');
+}
+
+.frontLightImg {
+    background-image: url('./img/index/frontLight4.png');
+}
+
+.interiorLightImg {
+    background-image: url('./img/index/interiorLight4.png');
+}
+
+.interiorDarkImg {
+    background-image: url('./img/index/interiorDark4.png');
+}
+
+.sideImg {
+    background-image: url('./img/index/side4.png');
+}
+
+.interiorSideImg {
+    background-image: url('./img/index/interiorSide.jpg');
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    body , #slide1 {
+        overflow: hidden !important;
+        max-width: 100vw;
+    }
+
+    #remote {
+        flex-wrap: wrap;
+        margin: 5px;
+    }
+
+    /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+    h1 {
+        
+    top: 10px;
+    font-size: 2em;
+    padding: 10px;
+    left: 20px;
+    }
+    p {
+        font-size: 2em;
+        top: 40px;
+        left: 20px;
+    }
+    .sign{
+        top: 80px;
+        left: 20px;
+    }
+
+    #front, #back, #frontLight, #backLight, #interiorLight, #interiorDark, #side, #interiorSide  {
+        width: 60px;
+        height: 60px;
+        aspect-ratio: 16/9;
+        background-position: center;
+        background-size: cover;
+        border-radius: 50%;
+        margin: 15px;
+    }
+
+    }
