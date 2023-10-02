@@ -223,20 +223,8 @@ p {
         margin: 5px;
     }
 
-    h1 {
-    top: 10px;
-    font-size: 2em;
-    padding: 10px;
-    left: 20px;
-    }
-    p {
-        font-size: 2em;
-        top: 40px;
-        left: 20px;
-    }
-    .sign{
-        top: 80px;
-        left: 20px;
+    h1, p, .sign{
+        display: none;
     }
 
     #front, #back, #frontLight, #backLight, #interiorLight, #interiorDark, #side, #interiorSide  {
